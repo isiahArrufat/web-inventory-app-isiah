@@ -16,18 +16,49 @@
             <h2>Add Aircraft here</h2>
             <form id="new-Aircraft">
                 <label for="name" class="aircraft-name"
-                >Enter Aircraft Here 
-                    <span class="required"></span>
-                    <input type="text" id="name" name="aircraft-name" required />
+                >Enter Aircraft Here : 
+                <br>
+                    <span class = "required"></span>
+                    <input type = "text" id = "name" name = "aircraft-name" required />
                 </label>
-
-                <!-- <label for="price" class="price">
-                    price of Aircraft  <span class="required"></span><input type="number" name="price" id="price" min="0" max="6000000000"></label> -->
+                </br>
+                <label for="price" class="price">
+                    price of Aircraft :  
+                    <br>
+                    <span class = "required"></span>
+                    <input type = "number" name = "price" id = "price" min = "0" max = "6000000000">
+                </label>
+                <br>
+                <label id = "inStock" class = "inStock">
+                   In Stock ? : 
+                   <br>
+                   <span class = "required"></span>
+                   <select name="inStock" id="inStock">
+                    <option value="yes">Yes</option>
+                    <option value="no">NO</option>
+                </select>
+                <br>
+                </label>
+                <label for = "aircraftType" class="aircraftType" >
+                    Aircraft Type :
+                    <br>
+                    <span class = "required"></span>
+                    <textarea class = "aircraftType" id = "aircraftType"></textarea>
+                </label>
+                <label for = "machSpeed">
+                    <br>
+                    Mach Speed :
+                    <br>
+                    <span class = "required"></span>
+                    <input type = "number" name = "machSpeed" id = "machSpeed" min = "0" max = "5.0">
+                </label>
             
+                <button type="submit">Submit Aircraft</button>
             </form>
         </section>
-        <section class="Aircrafts">
+        <section class = "Aircrafts">
             <h2> my fav's Aircrafts</h2>
+            <button>Remove Aircraft</button>
         </section>
 
     </main>
