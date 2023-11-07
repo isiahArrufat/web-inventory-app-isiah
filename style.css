@@ -39,5 +39,20 @@ main {
 input {
     width: 250px;
     padding: 3px 3px;
+   
 }
 
+
+#inStock {
+   margin-bottom: 8px;
+}
+
+img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+li { 
+    border: 2px solid grey;
+    background-color: lightgray;
+}
