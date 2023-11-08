@@ -12,6 +12,7 @@ form.addEventListener("submit", (event) => {
     const {name, price, inStock, aircraftType, machSpeed, img} = event.target
   
     AirCraftTemplate(name.value, price.value, inStock.value, aircraftType.value, machSpeed.value, img.value);
+
 })
 
 
@@ -28,14 +29,25 @@ const AirCraftTemplate = (name, price, inStock, aircraftType, machSpeed, img) =>
         Aircraft</strong>: ${price}</p><p><strong>Available??</strong>: 
         ${inStock}</p><p><strong>Type Of AirCraft</strong>: ${aircraftType}
         </p><p><strong>Aircraft TopSpeed</strong>: ${machSpeed}</p>`;
+
+
+        const button = document.querySelector(".remove");
+
+
+        li.append(button);
+
+        const ul = document.querySelector("ul");
+        ul.append(li);
     }
-    
-    const ul = document.querySelector("ul");
-
-    console.log(ul);
-
-    ul.append(li);
+    function removeLi(event) {
+        event.target.li.remove();
+      }
+      
 }
+
+   
+
+
 
 
 
