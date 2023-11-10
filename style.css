@@ -57,6 +57,14 @@ li {
     background-color: lightgray;
 }
 
+.option1 {
+    background-color: bisque;
+}
+
+.option2 {
+    background-color: red;
+}
+
 @media (max-width: 780px) {
     main {
         grid-template-columns: 1fr 1fr;
@@ -67,4 +75,5 @@ li {
     main {
         grid-template-columns: 1fr;
     }
+
 }

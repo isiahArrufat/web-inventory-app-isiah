@@ -10,6 +10,8 @@ form.addEventListener("submit", (event) => {
 //    console.log("machSpeed:", event.target.machSpeed.value);
 
     const {name, price, inStock, aircraftType, machSpeed, img} = event.target
+
+    
   
     AirCraftTemplate(name.value, price.value, inStock.value, aircraftType.value, machSpeed.value, img.value);
 
@@ -26,23 +28,35 @@ const AirCraftTemplate = (name, price, inStock, aircraftType, machSpeed, img) =>
     if (name && price && inStock && aircraftType && machSpeed) {
         li.innerHTML = `<img src="${img}" alt ="Pic Of Aircraft"><p>
         <strong>Aircraft Name</strong>: ${name}</p><strong>Price Of 
-        Aircraft</strong>: ${price}</p><p><strong>Available??</strong>: 
-        ${inStock}</p><p><strong>Type Of AirCraft</strong>: ${aircraftType}
+        Aircraft</strong>: ${price}</p><Button class = "toggleButton">In Stock 
+        ${inStock}</button>><p><strong>Type Of AirCraft</strong>: ${aircraftType}
         </p><p><strong>Aircraft TopSpeed</strong>: ${machSpeed}</p>`;
 
+        const toggleButton = li.querySelector(".toggleButton");
 
-        const button = document.querySelector(".remove");
+         toggleButton.addEventListener("click", () => {
+            li.classList.toggle("hidden");
+            toggleButton.classList.toggle("clicked");
+            
+        });
 
+
+        const button = document.createElement("button");
+        button.textContent = "Remove";
+        button.classList.add("remove");
+
+        button.addEventListener("click", () => {
+            li.remove();
+        });
 
         li.append(button);
 
         const ul = document.querySelector("ul");
+        
         ul.append(li);
     }
-    function removeLi(event) {
-        event.target.li.remove();
-      }
-      
+
+
 }
 
    
